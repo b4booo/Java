@@ -7,7 +7,6 @@ public class Main
             {
                 JFrame frame = new JFrame("Book System");
                 
-
                 JLabel login = new JLabel("LOGIN");
                 login.setBounds(30,30,50,50);
                 frame.add(login);
@@ -33,15 +32,12 @@ public class Main
                 frame.add(loginButton);
 
                 JButton registerButton = new JButton("REGISTER");
-                registerButton.setBounds(230,200,100,20);
+                registerButton.setBounds(230,250,100,20);
                 frame.add(registerButton);
 
                 frame.setSize(400,500);
-                frame.setVisible(true);
                 frame.setLayout(null);
+                frame.setVisible(true);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
-                
             }
     }
