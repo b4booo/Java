@@ -1,54 +1,28 @@
-import javax.swing.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
 
-class GUI
-{
-	public static void main(String args[])
+import java.swing.BorderFactory;
+import java.swing.JFrame;
+import java.swing.JPanel;
+
+public class GUI
 	{
-		JFrame frame = new JFrame();
-		
-		JTextField t1,t2;
-		t1 = new JTextField("");
-		t1.setBounds(100,150,400,100);
-		frame.add(t1);
-		
-		frame.setSize(600, 600);
-		frame.setLayout(null);
-		frame.setVisible(true);
-
-		
-		JButton strtBtn = new JButton("START");
-		strtBtn.setBounds(100,300,100,50);
-		frame.add(strtBtn);
-		strtBtn.addActionListener(new ActionListener()
-			{
-			public void actionPerformed(ActionEvent e)
-				{
-			t1.setText("Hello Every nyan");
-				}
-			});
-
-		JButton stpBtn = new JButton("STOP");
-		stpBtn.setBounds(250,300,100,50);
-		frame.add(stpBtn);
-
-		JButton rstBtn = new JButton("RESET");
-		rstBtn.setBounds(400,300,100,50);
-		frame.add(rstBtn);
-		rstBtn.addActionListener(new ActionListener()
-			{
-				public void actionPerformed(ActionEvent e)
-					{
-						t1.setText("");
-					}
-			});
-
-
-
-		
-
-		
-		
-		
+		public GUI()
+		{
+			JFrame frame = new JFrame();
+			
+			JPanel panel = new JPanel();
+			panel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
+			panel.setLayout(new GridLayout(0, 1));
+			
+			frame.add(panel, BorderLayout.CENTER);
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setTitle("Our GUI");
+			frame.pack();
+			frame.setVisible(true);
+		}
+		public static void main(String args[])
+		{
+		new GUI();
+		}
 	}
-}
